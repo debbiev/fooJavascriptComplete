@@ -62,31 +62,38 @@ console.log(jane);
 */
 
 // Coding Challenge 2
+//  He did a couple things different (better) than I did.
 
 var years = [1961, 1937, 1999, 2007];
 var years2 = [1989, 2003, 1977]
-var ages = Array();
+//var ages = Array();
+var ages = [];
 
 function printFullAge(yearsArray){
 	var result = Array();
 	for(var i=0; i < yearsArray.length; i++){
 		if((2018 - yearsArray[i]) >= 18){
-			result.push(true);
+			//result.push(true);
+			result[i]=true;
 		} else {
-			result.push(false);
+			//result.push(false);
+			result[i]=false;
 		}
 	}
 	return result;
 }
 
+//just need to declare i the first time
 for(var i=0; i < years.length; i++){
-	ages.push(2019 - years[i]);
+	//ages.push(2018 - years[i]);
+	ages[i]=2018 - years[i];
 }
-for(var i=0; i < ages.length; i++){
+
+for(i=0; i < ages.length; i++){
 	if(ages[i] >= 18){
-		console.log('person ' + i + ' is of full age');
+		console.log('person ' + (i+1) + ' is ' + ages[i] + ' years old, and is of full age');
 	} else {
-		console.log('person ' + i + ' is NOT of full age');
+		console.log('person ' + (i+1) + ' is ' + ages[i] + ' years old, and is NOT of full age');
 	}
 
 	console.log(ages[i]);
